@@ -1,22 +1,26 @@
-document.onload = ()=>{
+var select;
+window.onload= function(){
     var btn = document.getElementById("btnCargar");
-    var select = document.getElementById("cmbNombre");
+    select = document.getElementById("cmbNombre");
 
-    btn.onclick = ()=>{
+    btn.addEventListener('click', cargar);
+}
 
-        var x = empleados.map(function(e){
-            
-        });
+function cargar(){
+    clearSelect();
 
-        // empleados.map((x)=>{
-        //     // if(select.hasChildNodes)
-        //     //     break;
+    empleados.map(function(x){
+        var option = document.createElement('option');
+        option.textContent = x.nombre;
+        select.appendChild(option);
+    });
+}
 
-        //     var option = document.createElement('option');
-        //     option.textContent = x.nombre;
-        //     select.appendChild(option);
-        // });
-    };
+function clearSelect(){
+    var length = select.options.length;
+    for (i = 0; i < length; i++) {
+        select.remove(0);
+    }
 }
 
 // var vec = [3,4,2,6,7,5];
