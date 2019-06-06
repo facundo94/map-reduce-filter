@@ -52,6 +52,6 @@ function clearSelect(){
 
 // console.log(empleados.map(x => x.nombre));
 
-var x = empleados.map(function(e){
-    return {"nombre": e.nombre, "apellido": e.apellido}    
-});
+// var x = empleados.map(function(e){
+//     return {"nombre": e.nombre, "apellido": e.apellido}    
+// });
